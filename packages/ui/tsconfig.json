@@ -1,6 +1,9 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+    "extends": "../typescript-config/base.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
     "outDir": "dist"
   },
   "include": ["src"],
