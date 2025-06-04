@@ -1,5 +1,7 @@
 {
-  "extends": "./packages/typescript-config/base.json",
+  "files": [],
+  // "extends": "./packages/typescript-config/base.json",
+  //  "compilerOptions": {},  
    "references": [
     { "path": "./packages/ui" },
     { "path": "./apps/hooks" },
