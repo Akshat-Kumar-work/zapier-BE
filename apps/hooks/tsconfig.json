@@ -1,25 +1,36 @@
 {
- "extends": "../../packages/typescript-config/base.json",
+  "extends": "../../packages/typescript-config/base.json",
   "compilerOptions": {
-     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
-   
-
+    "rootDir": "./src" /* Specify the root folder within your source files. */,
     /* Emit */
-    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
 
-     "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
- 
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
+
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
     // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
 
     /* Type Checking */
-    "strict": true,                                      /* Enable all strict type-checking options. */
+    "strict": true /* Enable all strict type-checking options. */,
+
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+
    
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "paths": {   // How to resolve custom import aliases (like @repo/db), to directly use from src files not from dist
+      "@repo/db": ["../../packages/db/src"],
+      "@repo/be_common": ["../../packages/be_common/src"]
+    }
   },
-   "references": [
+
+
+//reference use
+//   “This project depends on another TypeScript project.”
+// To compile in dependency order
+// To link types across packages
+
+  "references": [
     { "path": "../../packages/be_common" },
-     { "path": "../../packages/db" }
+    { "path": "../../packages/db" }
   ]
 }

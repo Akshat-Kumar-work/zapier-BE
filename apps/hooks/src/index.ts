@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import beCommon from "@repo/be_common";
+import db from "@repo/db";
 import { Request,Response } from "express";
 
 dotenv.config();
@@ -8,6 +9,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+ 
 app.use(express.json());
 
 app.get("/", (req:Request, res:Response) => {
