@@ -18,8 +18,8 @@
 
    
     "paths": {   // How to resolve custom import aliases (like @repo/db), to directly use from src files not from dist
-      "@repo/db": ["../../packages/db/src"],
-      "@repo/be_common": ["../../packages/be_common/src"]
+      "@repo/db": ["../../packages/db/dist"],
+      "@repo/be_common": ["../../packages/be_common/dist"]
     }
   },
 
