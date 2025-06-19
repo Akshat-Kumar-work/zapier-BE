@@ -4,6 +4,7 @@
    "compilerOptions": {},  
    "references": [
     { "path": "./packages/ui" },
+    { "path": "./packages/be_common" },
     { "path": "./apps/hooks" },
     { "path": "./packages/db" }
   ]

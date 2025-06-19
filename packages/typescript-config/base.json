@@ -16,5 +16,8 @@
     "target": "ES2022",
     "incremental": true,       
     "composite": true,         
+    "rootDir": "./src",                          
+    "outDir":"./dit"
+
   }
 }

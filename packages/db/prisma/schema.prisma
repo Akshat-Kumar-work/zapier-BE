@@ -60,6 +60,7 @@ model ZapRun {
   id           String        @id @default(uuid())
   zapId        String
   zap          Zap           @relation(fields: [zapId], references: [id])
+  metaData     Json?
   zapRunOutBox ZapRunOutbox?
 }
 
