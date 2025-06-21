@@ -18,18 +18,18 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use('/user', userRoutes);
-app.use('/zap', zapRoutes);
-app.use('/trigger', triggerRoutes);
-app.use('/action', actionRoutes);
-app.use('/available-trigger', availableTriggerRoutes);
-app.use('/available-action', availableActionRoutes);
+app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/zap', zapRoutes);
+app.use('/api/v1/trigger', triggerRoutes);
+app.use('/api/v1/action', actionRoutes);
+app.use('/api/v1/available-trigger', availableTriggerRoutes);
+app.use('/api/v1/available-action', availableActionRoutes);
 
 
 app.get("/", (req:Request, res:Response) => {
-  return res.status(200).json(beCommon.success(null, "working fine"));
+  return res.status(200).json(beCommon.success(null, "base service working fine"));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Base Server is running on port ${PORT}`);
 });
