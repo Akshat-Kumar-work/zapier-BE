@@ -6,6 +6,8 @@
     { "path": "./packages/ui" },
     { "path": "./packages/be_common" },
     { "path": "./apps/hooks" },
+    { "path": "./apps/processors"},
+    {"path": "./apps/zap_base"},
     { "path": "./packages/db" }
   ]
 }
