@@ -9,10 +9,10 @@ import {
 
 const router = express.Router();
 
-router.post('/', createZapRun);
-router.get('/', getZapRuns);
-router.get('/:id', getZapRunById);
-router.put('/:id', updateZapRun);
-router.delete('/:id', deleteZapRun);
+router.post('/hooks/', createZapRun);
+router.get('/hooks/', getZapRuns);
+router.get('/hooks/:id', getZapRunById);
+router.put('/hooks/:id', updateZapRun);
+router.delete('/hooks/:id', deleteZapRun);
 
 export default router;

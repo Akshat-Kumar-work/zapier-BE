@@ -5,9 +5,10 @@
    "references": [
     { "path": "./packages/ui" },
     { "path": "./packages/be_common" },
-    { "path": "./apps/hooks" },
-    { "path": "./apps/processors"},
+    { "path": "./packages/db" },
+    { "path": "./packages/kafka" },
     {"path": "./apps/zap_base"},
-    { "path": "./packages/db" }
+    { "path": "./apps/hooks" },
+    { "path": "./apps/processors"}
   ]
 }
