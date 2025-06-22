@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use('/zap-runs', zapRunRoutes);
+app.use('/api/v1/zap-run', zapRunRoutes);
 
 
 app.get("/", (req:Request, res:Response) => {
