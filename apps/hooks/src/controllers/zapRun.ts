@@ -5,7 +5,7 @@ import ResponseBuilder from '@repo/be_common';
 export const createZapRun = async (req: Request, res: Response) => {
   const {zapId,metaData} = req.body;
   try {    
-    const zaprun = await db.$transaction(async(tx)=>{
+    const zaprun = await db.$transaction(async(tx:any)=>{
         const  zapRun = await tx.zapRun.create({
           data:{
             zapId:zapId,

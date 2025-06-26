@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node ./dist/index.js",
-    "build": "tsc -b"
+    "start": "node ./dist/index.js",
+    "build": "tsc -b",
+    "dev": "nodemon --watch src --ext ts,js,json --exec ts-node src/index.ts"
   },
-    "dependencies": {
-    "@repo/be_common": "workspace:*",
-    "@repo/db": "workspace:*",
+  "dependencies": {
+    "@repo/be_common": "*",
+    "@repo/db": "*",
     "dotenv": "^16.5.0",
     "express": "^4.21.2"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
