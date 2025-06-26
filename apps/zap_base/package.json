@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node ./dist/index.js"
+    "start":"node ./dist/index.js",
+    "build": "tsc -b"
   },
     "dependencies": {
-    "@repo/be_common": "*",
-    "@repo/db": "*",
+    "@repo/be_common": "workspace:*",
+    "@repo/db": "workspace:*",
     "dotenv": "^16.5.0",
     "express": "^4.21.2"
   },
