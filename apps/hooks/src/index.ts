@@ -1,12 +1,7 @@
 import express from "express";
-import dotenv from "dotenv";
 import beCommon from "@repo/be_common";
 import { Request,Response } from "express";
 import zapRunRoutes from "./routes/zapRunRoutes";
-
-
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
