@@ -1,8 +1,9 @@
 import { Kafka } from "kafkajs";
 
- const kafka = new Kafka({
+ export const kafka = new Kafka({
   clientId: 'zapier-kafka-service',
-  brokers: ['localhost:9000']
+  brokers: ['localhost:9092']
 });
 
-export default kafka;
+export * from "./producer";
+export * from "./topics";

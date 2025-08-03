@@ -1,9 +1,9 @@
 
-import kafka from './index';
-
+import {kafka} from './index';
+import {Topics} from "./topics";
 const producer = kafka.producer();
 
-export const sendEvent = async (topic: string, message: string) => {
+export const sendEvent = async ( topic: (typeof Topics)[keyof typeof Topics], message: string) => {
   await producer.connect();
   await producer.send({
     topic,

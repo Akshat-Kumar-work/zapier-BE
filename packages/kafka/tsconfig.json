@@ -15,7 +15,9 @@
 
     /* Type Checking */
     "strict": true,                                      /* Enable all strict type-checking options. */
+    "composite": true,
    
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": ["src"]
 }
