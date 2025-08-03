@@ -71,4 +71,10 @@ model ZapRunOutbox {
   id       String @id @default(uuid())
   zapRunId String @unique
   zapRun   ZapRun @relation(fields: [zapRunId], references: [id])
+  status  ZapRunOutboxStatus  @default(PENDING)
+}
+
+enum ZapRunOutboxStatus {
+  PENDING
+  PROCESSED_OVER_KAFKA
 }
