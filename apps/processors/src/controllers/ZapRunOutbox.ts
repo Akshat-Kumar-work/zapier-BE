@@ -18,6 +18,11 @@ export const processPendingZapRuns = async (req: Request, res: Response) => {
         data: { status: "PROCESSED_OVER_KAFKA" },
       });
     }
+
+    res.status(200).json(
+        ResponseBuilder.success("All pending zapRun processed")
+    )
+    
   } catch (error) {
     return res
       .status(400)

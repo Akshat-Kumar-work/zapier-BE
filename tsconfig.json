@@ -9,6 +9,7 @@
     { "path": "./packages/kafka" },
     {"path": "./apps/zap_base"},
     { "path": "./apps/hooks" },
-    { "path": "./apps/processors"}
+    { "path": "./apps/processors"},
+    {"path": "./apps/worker"}
   ]
 }
