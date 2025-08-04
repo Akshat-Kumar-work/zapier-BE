@@ -6,7 +6,7 @@ import { kafka, sendEvent, Topics } from "@repo/kafka";
 export const processPendingZapRuns = async (req: Request, res: Response) => {
   try {
     const pendingZaps = await db.zapRunOutbox.findMany({
-      where: { status: "PENDING" },
+      // where: { status: "PENDING" },
       take: 10,
     });
 
