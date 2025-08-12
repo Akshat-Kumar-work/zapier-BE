@@ -10,8 +10,10 @@ export const processPendingZapRuns = async (req: Request, res: Response) => {
       take: 10,
     });
 
+    console.log("pending zaps are ",pendingZaps)
+
     for (const zap of pendingZaps) {
-      await sendEvent(Topics.ZAP_EVENTS, JSON.stringify(zap.id));
+      await sendEvent(Topics.ZAP_EVENTS, JSON.stringify(zap.zapRunId));
 
       await db.zapRunOutbox.update({
         where: { id: String(zap.id) },
