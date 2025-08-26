@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import db from '@repo/db';
-import ResponseBuilder from '@repo/be_common';
+import ResponseBuilder from '@repo/be_common/dist';
 
 export const createTrigger = async (req: Request, res: Response) => {
   try {

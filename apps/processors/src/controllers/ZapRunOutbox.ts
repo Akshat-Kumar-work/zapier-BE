@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import db from "@repo/db";
-import ResponseBuilder from "@repo/be_common";
+import ResponseBuilder from "@repo/be_common/dist";
 import { kafka, sendEvent, Topics } from "@repo/kafka";
 
 export const processPendingZapRuns = async (req: Request, res: Response) => {

@@ -8,11 +8,12 @@ import {
 } from '../controllers/trigger';
 
 const router = express.Router();
+import { authenticateToken } from '@repo/be_common';
 
-router.post('/', createTrigger);
-router.get('/', getTriggers);
-router.get('/:id', getTriggerById);
-router.put('/:id', updateTrigger);
-router.delete('/:id',deleteTrigger);
+router.post('/',authenticateToken, createTrigger);
+router.get('/',authenticateToken, getTriggers);
+router.get('/:id',authenticateToken, getTriggerById);
+router.put('/:id',authenticateToken, updateTrigger);
+router.delete('/:id',authenticateToken, deleteTrigger);
 
 export default router;

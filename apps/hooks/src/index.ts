@@ -1,5 +1,5 @@
 import express from "express";
-import beCommon from "@repo/be_common";
+import beCommon from "@repo/be_common/dist";
 import { Request,Response } from "express";
 import zapRunRoutes from "./routes/zapRunRoutes";
 

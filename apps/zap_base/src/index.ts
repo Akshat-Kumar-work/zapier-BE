@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import beCommon from "@repo/be_common";
+import beCommon from "@repo/be_common/dist";
 import { Request,Response } from "express";
 import userRoutes from "./routes/userRoutes";
 import zapRoutes from "./routes/zapRoutes";
@@ -8,7 +8,7 @@ import triggerRoutes from "./routes/triggerRoutes";
 import actionRoutes from "./routes/actionRoute";
 import availableTriggerRoutes from "./routes/availableTriggerRoutes";
 import availableActionRoutes from "./routes/availableActionRoutes";
-
+import authRoutes from "./routes/authRoutes";
 
 
 
@@ -24,6 +24,7 @@ app.use('/api/v1/trigger', triggerRoutes);
 app.use('/api/v1/action', actionRoutes);
 app.use('/api/v1/available-trigger', availableTriggerRoutes);
 app.use('/api/v1/available-action', availableActionRoutes);
+app.use('/api/v1/auth',authRoutes);
 
 
 app.get("/", (req:Request, res:Response) => {
